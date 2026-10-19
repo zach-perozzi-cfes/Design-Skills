@@ -1,0 +1,14 @@
+{
+  "name": "design-skills",
+  "private": true,
+  "type": "module",
+  "description": "Design-focused Agent Skills for Claude.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "new": "node scripts/new-skill.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

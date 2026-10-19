@@ -1,0 +1,21 @@
+{
+  "name": "design-skills",
+  "owner": {
+    "name": "Zach Perozzi"
+  },
+  "metadata": {
+    "description": "Design-focused Agent Skills for Claude Code and claude.ai.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "design-skills",
+      "description": "Design critique, review, and production skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/design-critique"
+      ]
+    }
+  ]
+}
