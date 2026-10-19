@@ -1,6 +1,32 @@
 # Design Skills
 
-Design-focused [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) for Claude Code and claude.ai.
+A growing library of [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) built for the **Design department** at Cape Fear Energy Systems. This repo exists to accumulate the department's skills in one place, so design knowledge gets captured once and reused by everyone in Claude Code and claude.ai.
+
+## Purpose
+
+Every skill here should support the work the Design department does. If a skill doesn't help someone on that team do their job faster or more accurately, it belongs somewhere else.
+
+## About the Design department
+
+Design takes a sold job and turns it into a permit-ready plan set and an install hand-off. The work splits into two tracks:
+
+- **Structural design and plan set:** confirm the design in Scanifly, create the Zoho Project, model the roof in SketchUp, fill out System Info, and build the Installation and Permit Plans in Layout. Anything that needs a structural stamp goes to the engineer before permitting.
+- **Electrical design and site assessment:** verify equipment compatibility, size wire (ampacity, conduit fill, temperature derates), match the design to the site, and draft the permit-ready line diagram (LD). Before install, prepare the retrofit site assessment, install notes, and material list for the warehouse. After install, update the as-built.
+
+Battery additions skip the structural track and go straight to the electrical one. The project manager submits the permit once the stamped plans and the LD are both ready.
+
+**Tools the department works in:** Zoho Projects, Zoho CRM, Zoho WorkDrive, Scanifly, SketchUp / Layout, and Excel.
+
+**Where time goes today**, and so where skills can help most:
+
+- Hunting for site photos that are scattered or incomplete
+- Sizing wire and breakers by hand, then re-sizing after the first pass
+- Catching wrong string sizes or missing material that came from the sale
+- Designing battery, generator, and system-addition jobs from scratch
+- Re-keying data from Zoho into Excel and System Info
+- Tracking material on and off the LD for install notes
+
+Good skill candidates follow from that list: pre-design checks of the sales agreement against photos and specs, wire sizing, material list generation, install notes, and plan set QA.
 
 ## Skills
 
