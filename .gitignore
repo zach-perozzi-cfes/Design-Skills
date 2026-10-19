@@ -3,3 +3,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 .claude/settings.local.json
+
+# Local connection overrides (may contain machine-specific values)
+skills/*/data/connections/connections.local.json
+skills/*/data/**/*.local.*

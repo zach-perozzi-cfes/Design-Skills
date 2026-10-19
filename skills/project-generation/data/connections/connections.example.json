@@ -1,0 +1,25 @@
+{
+  "$comment": "Template only. Copy to connections.local.json for machine-specific values. Never put secrets here; auth.env names the variable that holds them.",
+  "example-system": {
+    "type": "TBD (mcp | rest | database | file-share | spreadsheet-sync)",
+    "name": "TBD",
+    "base_url": "TBD",
+    "connector": "TBD (MCP server or tool name, if any)",
+    "auth": {
+      "method": "TBD (oauth | api-key | service-account)",
+      "env": ["TBD_ENV_VAR_NAME"]
+    },
+    "access": "read-only",
+    "resources": [
+      {
+        "name": "TBD",
+        "path_or_endpoint": "TBD",
+        "returns": "TBD",
+        "fields_used": ["TBD"]
+      }
+    ],
+    "rate_limit": "TBD",
+    "owner": "TBD",
+    "notes": "TBD"
+  }
+}

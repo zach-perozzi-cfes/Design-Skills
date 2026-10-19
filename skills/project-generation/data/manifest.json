@@ -1,0 +1,29 @@
+{
+  "$comment": "Registry of every data source the project-generation skill may use. Add one entry per spreadsheet or connection. Keep ids stable; references cite them.",
+  "version": 1,
+  "spreadsheets": [
+    {
+      "id": "example-rate-card",
+      "path": "spreadsheets/example-rate-card.xlsx",
+      "description": "TBD: what this sheet contains",
+      "use_when": "TBD: the question or step that needs it",
+      "tabs": [
+        { "name": "TBD", "contains": "TBD", "key_columns": ["TBD"] }
+      ],
+      "owner": "TBD",
+      "last_updated": "TBD",
+      "refresh": "TBD (manual | monthly | on-change)",
+      "status": "placeholder"
+    }
+  ],
+  "connections": [
+    {
+      "id": "example-system",
+      "definition": "connections/connections.example.json#example-system",
+      "description": "TBD: what the system holds",
+      "use_when": "TBD",
+      "access": "read-only",
+      "status": "placeholder"
+    }
+  ]
+}
