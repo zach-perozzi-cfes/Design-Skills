@@ -1,29 +1,27 @@
 {
-  "$comment": "Registry of every data source the project-generation skill may use. Add one entry per spreadsheet or connection. Keep ids stable; references cite them.",
-  "version": 1,
-  "spreadsheets": [
+  "$comment": "Registry of every data source the project-generation skill may use. Keep ids stable; references cite them.",
+  "version": 2,
+  "datasets": [
     {
-      "id": "example-rate-card",
-      "path": "spreadsheets/example-rate-card.xlsx",
-      "description": "TBD: what this sheet contains",
-      "use_when": "TBD: the question or step that needs it",
-      "tabs": [
-        { "name": "TBD", "contains": "TBD", "key_columns": ["TBD"] }
-      ],
-      "owner": "TBD",
-      "last_updated": "TBD",
-      "refresh": "TBD (manual | monthly | on-change)",
-      "status": "placeholder"
+      "id": "timing-lookups",
+      "path": "timing_lookups.json",
+      "description": "AHJ, utility and HOA timing tables and fixed durations from 35 completed retrofit jobs (Aug 2025 - Apr 2026)",
+      "use_when": "Computing a Retrofit timeline; read by scripts/compute_timeline.py",
+      "owner": "Zach Perozzi",
+      "last_updated": "2026-10-19",
+      "refresh": "manual (rebuild from new completed jobs)",
+      "status": "current"
     }
   ],
+  "spreadsheets": [],
   "connections": [
     {
-      "id": "example-system",
-      "definition": "connections/connections.example.json#example-system",
-      "description": "TBD: what the system holds",
-      "use_when": "TBD",
-      "access": "read-only",
-      "status": "placeholder"
+      "id": "zoho-projects",
+      "definition": "connections/connections.example.json#zoho-projects",
+      "description": "CFES Zoho Projects portal: live template, task lists, tasks, teams, tags",
+      "use_when": "Inspecting the live template or a comparable project; building into a TEMPLATE BUILD - test project after confirmation",
+      "access": "read-only by default; writes gated on explicit confirmation",
+      "status": "current"
     }
   ]
 }

@@ -5,6 +5,7 @@ Reference data for `project-generation`: spreadsheets and connection definitions
 ```
 data/
   manifest.json          registry of every source (the entry point)
+  timing_lookups.json    AHJ / utility timing tables (edit numbers here, not the script)
   spreadsheets/          reference spreadsheets (rates, templates, catalogs, history)
   connections/           definitions of live systems (no secrets)
 ```

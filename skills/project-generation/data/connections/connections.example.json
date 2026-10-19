@@ -1,25 +1,14 @@
 {
-  "$comment": "Template only. Copy to connections.local.json for machine-specific values. Never put secrets here; auth.env names the variable that holds them.",
-  "example-system": {
-    "type": "TBD (mcp | rest | database | file-share | spreadsheet-sync)",
-    "name": "TBD",
-    "base_url": "TBD",
-    "connector": "TBD (MCP server or tool name, if any)",
-    "auth": {
-      "method": "TBD (oauth | api-key | service-account)",
-      "env": ["TBD_ENV_VAR_NAME"]
-    },
-    "access": "read-only",
+  "$comment": "Never put secrets here; auth names the connector that supplies credentials.",
+  "zoho-projects": {
+    "type": "mcp",
+    "name": "Zoho Projects",
+    "connector": "Zoho Projects MCP connector (claude.ai)",
+    "auth": { "method": "oauth", "env": [] },
+    "access": "read-only until the user confirms a build",
     "resources": [
-      {
-        "name": "TBD",
-        "path_or_endpoint": "TBD",
-        "returns": "TBD",
-        "fields_used": ["TBD"]
-      }
+      { "name": "Live Retrofit template (v3.2.0)", "returns": "task lists, tasks, priorities, teams, tags", "fields_used": ["name", "priority", "tasklist", "tags"] }
     ],
-    "rate_limit": "TBD",
-    "owner": "TBD",
-    "notes": "TBD"
+    "notes": "Connector cannot create phases, dependency links, teams or members, or convert to a template. See references/templates/zoho-connector-limits.md."
   }
 }

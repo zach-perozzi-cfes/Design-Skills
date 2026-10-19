@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+  "sources": [
+    "Project Timeline Template.md (built 2026-10-14 from completed Zoho Projects retrofit jobs, Aug 2025 - Apr 2026)",
+    "P-2920_Yurcisin_Build_Logic.md (Retrofit v3.2.0 timing rules, 2026-10-19)"
+  ],
+  "units": "calendar days from project creation (day 0)",
+  "fixed": {
+    "design_done_day": 8,
+    "hoa_approved_day_when_required": 40,
+    "install_duration_days": 18,
+    "as_built_after_install_days": 3,
+    "inspection_after_as_built_min_days": 1,
+    "energize_after_inspections_days": 3,
+    "monitoring_review_after_energize_days": 17,
+    "customer_estimate_buffer_days": 32
+  },
+  "ahj_default": {
+    "label": "Default (all retrofit projects)",
+    "n": 35,
+    "design_to_permit": 17,
+    "install_to_electrical_inspection": 6,
+    "install_to_building_inspection": 6
+  },
+  "ahj": {
+    "New Hanover": {"n": 9, "design_to_permit": 13, "install_to_electrical_inspection": 7, "install_to_building_inspection": 12},
+    "Pender": {"n": 6, "design_to_permit": 11, "install_to_electrical_inspection": 4, "install_to_building_inspection": 6},
+    "Brunswick": {"n": 3, "design_to_permit": 27, "install_to_electrical_inspection": 12, "install_to_building_inspection": 12},
+    "Charleston": {"n": 3, "design_to_permit": 24, "install_to_electrical_inspection": 10, "install_to_building_inspection": 10},
+    "Burgaw": {"n": 2, "design_to_permit": 22, "install_to_electrical_inspection": 3, "install_to_building_inspection": 3},
+    "Horry County": {"n": 2, "design_to_permit": 13, "install_to_electrical_inspection": 7, "install_to_building_inspection": 7},
+    "Craven": {"n": 1, "design_to_permit": 75, "install_to_electrical_inspection": 26, "install_to_building_inspection": 26},
+    "Leland": {"n": 1, "design_to_permit": 48, "install_to_electrical_inspection": 6, "install_to_building_inspection": 6},
+    "North Charleston": {"n": 1, "design_to_permit": 17, "install_to_electrical_inspection": 10, "install_to_building_inspection": 6},
+    "North Topsail Beach": {"n": 1, "design_to_permit": 35, "install_to_electrical_inspection": 9, "install_to_building_inspection": 9},
+    "Oak Island": {"n": 1, "design_to_permit": 12, "install_to_electrical_inspection": 8, "install_to_building_inspection": 7},
+    "Oriental": {"n": 1, "design_to_permit": 8, "install_to_electrical_inspection": 2, "install_to_building_inspection": 2},
+    "Southport": {"n": 1, "design_to_permit": 47, "install_to_electrical_inspection": 19, "install_to_building_inspection": 18},
+    "St. James": {"n": 1, "design_to_permit": 21, "install_to_electrical_inspection": 0, "install_to_building_inspection": 0},
+    "Swansboro": {"n": 1, "design_to_permit": 6, "install_to_electrical_inspection": 5, "install_to_building_inspection": 4},
+    "Trent Woods": {"n": 1, "design_to_permit": 28, "install_to_electrical_inspection": 2, "install_to_building_inspection": 2}
+  },
+  "ahj_aliases": {
+    "Horry": "Horry County",
+    "St James": "St. James",
+    "Saint James": "St. James",
+    "New Hanover County": "New Hanover",
+    "Pender County": "Pender",
+    "Brunswick County": "Brunswick",
+    "Charleston County": "Charleston"
+  },
+  "utility_default": {
+    "label": "Default (all retrofit projects)",
+    "n": 35,
+    "design_to_interconnection_approval": 66,
+    "energize_to_grid_export": 2
+  },
+  "utility": {
+    "Duke Energy Progress": {"n": 17, "design_to_interconnection_approval": 70, "energize_to_grid_export": 0},
+    "Brunswick EMC": {"n": 5, "design_to_interconnection_approval": 67, "energize_to_grid_export": 9},
+    "Berkeley Co-op": {"n": 2, "design_to_interconnection_approval": 75, "energize_to_grid_export": 12},
+    "Dominion Energy": {"n": 2, "design_to_interconnection_approval": 75, "energize_to_grid_export": 0},
+    "Horry Electric": {"n": 2, "design_to_interconnection_approval": 59, "energize_to_grid_export": 18},
+    "Jones-Onslow EMC": {"n": 2, "design_to_interconnection_approval": 65, "energize_to_grid_export": 16},
+    "New Bern Electric": {"n": 2, "design_to_interconnection_approval": 57, "energize_to_grid_export": 1},
+    "City of Southport": {"n": 1, "design_to_interconnection_approval": 110, "energize_to_grid_export": 12},
+    "Four County EMC": {"n": 1, "design_to_interconnection_approval": 42, "energize_to_grid_export": 21}
+  },
+  "utility_aliases": {
+    "Duke": "Duke Energy Progress",
+    "Duke Energy": "Duke Energy Progress",
+    "Brunswick Electric": "Brunswick EMC",
+    "Berkeley Electric": "Berkeley Co-op",
+    "Berkeley Electric Cooperative": "Berkeley Co-op",
+    "Dominion": "Dominion Energy",
+    "Horry Electric Cooperative": "Horry Electric",
+    "JOEMC": "Jones-Onslow EMC",
+    "Jones-Onslow Electric Membership Corporation": "Jones-Onslow EMC",
+    "New Bern": "New Bern Electric",
+    "Southport": "City of Southport",
+    "Four County": "Four County EMC"
+  },
+  "utilities_without_retrofit_data": ["Santee Cooper"],
+  "low_confidence_below_n": 3
+}

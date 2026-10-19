@@ -1,0 +1,59 @@
+{
+  "skill_name": "project-generation",
+  "evals": [
+    {
+      "id": 1,
+      "name": "retrofit-hoa-default-ahj-duke",
+      "prompt": "Generate the Zoho Projects template for a residential retrofit: PV + Tesla battery, NC, Wake County AHJ, Duke Energy Progress, HOA approval required, LightReach lease.",
+      "expected_output": "Four sections in order. Wake not in lookup table so default AHJ row is flagged. Milestone days match compute_timeline.py: design 8, permit 25, HOA 40, install 40-58, as-built 61, inspections 64, energized 67, interconnection and grid export 78, project end 84, customer estimate 116. HOA tasks and NCUC included; Enphase labor reimbursement excluded with reason. JSON counts match outline. No Zoho writes attempted before confirmation.",
+      "assertions": [
+        "Output has the four sections: assumptions, outline, JSON spec, build notes, in that order",
+        "Assumptions state that Wake is not in the AHJ table and the default row was used",
+        "Install starts on day 40 because HOA approval is later than the permit (day 25)",
+        "Total duration is stated as 84 days",
+        "Enphase labor reimbursement is listed as excluded because the inverter is not Enphase",
+        "Build notes say phases and dependency links cannot be created by the connector and give manual steps",
+        "Task count in the outline equals the number of tasks in the JSON",
+        "No tool call creates or updates anything in Zoho Projects"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "retrofit-no-hoa-horry-sc",
+      "prompt": "Build me a retrofit template for a PV-only Enphase job in Horry County, SC. Utility is Horry Electric. No HOA.",
+      "expected_output": "Specific Horry County and Horry Electric rows used (both rest on 2 projects, so low-confidence flags, no default fallback). No HOA block. Enphase labor reimbursement included. NCUC excluded because state is SC. Battery fields N/A.",
+      "assertions": [
+        "HOA tasks are listed as excluded and install start is driven by the permit",
+        "NCUC Submitted is excluded because the state is SC",
+        "Sign up for Service Labor Reimbursement is included because the inverter is Enphase",
+        "AHJ row is Horry County and utility row is Horry Electric, each with a low-confidence note",
+        "Numbers match the output of scripts/compute_timeline.py for these inputs"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ev-charger-missing-data",
+      "prompt": "Make a template for EV charger installs.",
+      "expected_output": "Asks once, briefly, for the task chain or a comparable live project, noting there is no usable EV history. Does not invent a full task chain from the retrofit data.",
+      "assertions": [
+        "Asks at most one brief clarifying question rather than generating a full template immediately",
+        "States that no EV task data exists",
+        "Does not present retrofit durations as validated EV durations"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "determinism-rerun",
+      "prompt": "Generate the retrofit template for Pender County, Duke Energy Progress, no HOA, NC, Enphase, PV only. (Run this twice in separate sessions and diff the JSON.)",
+      "expected_output": "Identical IDs, ordering, names, and numbers across runs.",
+      "assertions": [
+        "Two runs produce JSON that is identical apart from whitespace",
+        "IDs are sequential with no gaps after excluded blocks"
+      ],
+      "files": []
+    }
+  ]
+}
